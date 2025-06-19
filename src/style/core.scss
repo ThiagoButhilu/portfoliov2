@@ -1,0 +1,372 @@
+@import './compStyles/Header.scss';
+@import './compStyles/Intro.scss';
+@import './compStyles/Main.scss';
+@import './compStyles/project.scss';
+@import './compStyles/form.scss';
+@import './compStyles/footer.scss';
+@import url('./compStyles/timeline.scss');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+
+
+// _variables.scss
+$black: #212121;
+$green: #23ce6b;
+$blue: #016fb9;
+$background: #f0f4f8;
+
+$font-color: #2f2f2f;
+$secondary-color: #6658d3;
+// _mixins.scss
+@mixin transition($property, $duration, $timing-function) {
+  transition: $property $duration $timing-function;
+}
+
+// _global.scss
+:root {
+  --pink: #{$pink};
+  --black: #{$black};
+  --green: #{$secondary-color};
+  --blue: #{$blue};
+  --font-color: #{$font-color};
+  --background: #{$background};
+  scroll-padding-top: 10rem;
+}
+
+:root.light {
+  body {
+    @include transition(all, 0.5s, ease);
+    color: var(--black);
+  }
+
+  .logo {
+    color: var(--black);
+  
+  } 
+}
+
+.primary-color {
+  color: var(--green);
+}
+
+h1,
+h2,
+h3{
+  color: var(--green);
+  font-weight: 200;
+}
+
+.header-fixed {
+    @include transition(all, 0.5s, ease);
+    background-color: rgba(0, 0, 0, 0.042);
+    
+    a {
+      @include transition(all, 0.5s, ease);
+      color:  var(--font-color);
+    }
+
+    .menu,
+    .menu:before,
+    .menu:after {
+      background-color: var(--black);
+    }
+
+    .menu.active {
+      background-color: rgba(85, 85, 85, 0);
+    }
+  }
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 10rem;
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  width: 100%;
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+
+    a {
+      color: var(--font-color);
+      padding: 0.6rem;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      @include transition(filter, 0.25s, ease);
+      
+      &.button {
+        padding: 0.6rem 2rem;
+        color: var(--background) !important;
+      }
+
+      &:hover {
+        filter: brightness(0.6);
+      }
+    }
+
+    .menu-container {
+      cursor: pointer;
+      padding: 0.6rem 0;
+    }
+
+    .menu {
+      width: 2rem;
+      height: 0.2rem;
+      background: var(--font-color);
+      position: relative;
+      cursor: pointer;
+      display: none;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0.5rem;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+      }
+
+      &.active:before {
+        bottom: 0;
+        transform: rotate(45deg);
+      }
+
+      &.active:after {
+        top: 0;
+        transform: rotate(135deg);
+      }
+
+      &.active {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0.2rem;
+        background: var(--font-color);
+        cursor: pointer;
+        @include transition(all, 0.6s, ease);
+      }
+    }
+
+
+    label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 55px;
+      height: 30px;
+      background: var(--green);
+      display: block;
+      justify-content: center;
+      align-items: center;
+      @include border-radius(100px);
+      position: relative;
+      margin-left: auto;
+      right: 10px;
+    }
+
+    label:after {
+      content: '';
+      background: var(--font-color);
+      width: 20px;
+      height: 20px;
+      @include border-radius(50%);
+      position: absolute;
+      top: 5px;
+      left: 4px;
+      @include transition(all, 0.32s, cubic-bezier(0.68, -0.55, 0.27, 1.55));
+    }
+
+    input:checked + label {
+      background: var(--pink);
+    }
+
+    input:checked + label:after {
+      left: calc(100% - 5px);
+      transform: translateX(-100%);
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    label {
+      position: relative;
+    }
+  }
+
+  @media (max-width: 960px) {
+    padding: 1.8rem 3rem;
+    .menu {
+      display: block;
+    }
+
+    nav {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: var(--blue);
+      top: 0;
+      left: 0;
+      @include transition(opacity, 0.25s, ease);
+
+      background-color: var(--green);
+      a.button {
+        background-color: var(--pink);
+      }
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+
+body {
+  background: var(--background);
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h2,
+h3{
+  color: var(--green);
+}
+
+body {
+  font-size: 1.6rem;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--black);
+  color: var(--font-color);
+  	font-family: "DM Sans", sans-serif;
+}
+
+input,
+textarea,
+button {
+	font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+
+.clickable {
+  margin: 3rem 0 3rem 0;
+
+  a{
+	font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    border: none;
+    color: var(--background);
+    background-color: var(--green);
+    padding: 0.6rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    &:hover {
+    filter: brightness(0.8);
+  }
+  }
+}
+
+button,
+.button {
+  border: none;
+  cursor: pointer;
+  background-color: var(--green);
+  color: var(--font-color);
+  border-radius: 2rem;
+  font-weight: 500;
+  @include transition(filter, 0.25s, ease);
+  
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+button:disabled,
+.button:disabled {
+  filter: brightness(0.8);
+  cursor: not-allowed;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--font-color);
+  // &::first-letter {
+  //   color: var(--green);
+  // }
+}
+
+@media only screen and (max-width: 959px),
+only screen and (min-width: 768px) and (max-width: 959px),
+only screen and (max-width: 767px),
+only screen and (min-width: 480px) and (max-width: 767px) {
+  div.root{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-align: center;
+  }
+  
+  .container {
+    display: block;
+  }
+    p{
+        font-size: 17px !important;
+        text-align: center !important;
+    }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */

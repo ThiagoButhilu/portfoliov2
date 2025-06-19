@@ -1,0 +1,115 @@
+.main {
+  padding-top: 12rem !important;
+  gap: 2rem;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--background);
+
+
+  .about {
+    color: var(--background) !important;
+    background-color: var(--green) !important;
+    border-radius: 10px;
+
+    h2{
+      color: var(--background);
+    }
+  }
+
+  
+
+  div {
+    margin: 2rem 0;
+    padding: 2rem;
+  }
+
+  img {
+    padding: 0%;
+    margin: 0;
+  }
+
+  .hero-image {
+    min-width: 45%;
+    display: flex;
+    justify-content: center;
+
+    img{
+        max-width: 36rem;
+    box-shadow: 2px 6px 9px 0px black;
+
+    }
+  }
+
+  p{
+    margin: 6px;
+    letter-spacing: 0.1rem;
+  }
+
+
+@media (max-width: 740px){
+    padding: 0 4rem;
+  }
+
+@media(max-width: 360px){
+    padding: 0 2rem;
+  }
+}
+
+.container-img {
+    display: flex;
+    width: 100%;
+    margin: 0, 0 ,2px, 0;
+    padding: 2rem !important;
+    background-color: var(--background);
+    border-radius: 1rem;
+    justify-content: center;
+
+    img {
+      width: 5rem;
+      margin-right: 17px;
+    }
+  }
+
+
+//RESPONSIVE STYLES
+
+@media only screen and (max-width: 959px),
+only screen and (min-width: 768px) and (max-width: 959px),
+only screen and (max-width: 767px),
+only screen and (max-width: 479px)
+
+ {
+  .main {
+
+    .about {
+      padding: 2rem;
+      margin: 2rem;
+    }
+
+    .container-img {
+      justify-content: space-around !important;
+    }
+
+      .hero-image {
+      min-width: 3rem;
+      display: flex;
+      align-items: center;
+
+      img{
+        min-width: 20rem;
+        border-radius: 4rem;
+        box-shadow: 2px 6px 9px 0px black;
+      }
+    }
+     div{
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+    } 
+    }
+
+  
+
+  img {
+    margin: 0 !important;
+    width: 8.2vw !important;
+  }
+}
