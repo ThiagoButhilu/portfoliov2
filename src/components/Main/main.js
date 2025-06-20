@@ -6,7 +6,7 @@ import bootstrap from '../../assets/bootstrap-icon.svg';
 import react from '../../assets/react-icon.svg';
 import sass from '../../assets/sass-icon.svg'
 import wordpress from '../../assets/wordpress.png'
-
+import typescript from '../../assets/typescript-icon.svg'
 import mysql from '../../assets/mysql-icon.svg';
 
 import profile from '../../assets/profile.jpg';
@@ -60,6 +60,7 @@ function Main() {
                         <img src={css} alt='css'/>
                         <img src={sass} alt='css'/>
                         <img src={js} alt='js'/>
+                        <img src={typescript} alt='js'/>
                         <img src={bootstrap} alt='bootstrap'/>
                         <img src={react} alt='react'/>
                         <img src={mysql} alt='mysql'/>
