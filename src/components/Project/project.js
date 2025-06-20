@@ -14,6 +14,7 @@ const jsonData = [
 const Project = () => (
   <div className="project-container" id='projects'>
     <h1>Meus projetos</h1>
+    {jsonData.length === 0 ? (
     <div className="container project" id='project' name='project'>
       {jsonData.map((data) => (
         <motion.div 
@@ -41,6 +42,11 @@ const Project = () => (
         </motion.div>
       ))}
     </div>
+    ) : (
+        <div>
+            <h3>Ainda nada por aqui! </h3>
+        </div>
+    )}
   </div>
 );
 

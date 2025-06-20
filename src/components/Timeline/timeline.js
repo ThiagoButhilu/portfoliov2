@@ -104,14 +104,17 @@ const jsonData = [ //timeline dates
 
 const TimelineItem = ({ data }) => (
   <motion.div 
-    initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            viewport={{ once: false }}
-            transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0, 0.71, 0.2, 1.01],
-            }}
+initial={{ opacity: 0, scale: 0.5 }}
+  whileInView={{
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.6,
+      delay: 0.2,
+      ease: [0, 0.71, 0.2, 1.01],
+    }
+  }}
+  viewport={{ once: false }}
     className="timeline-item">
         <div className="timeline-item-content">
             <time>{data.date}</time>
