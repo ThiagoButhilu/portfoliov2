@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const jsonData = [ //timeline dates
     {
         text: 'Menor Aprendiz - Infraestrutura - TIM Brasil',
-        date: 'February 25 2019',
+        date: 'Agosto, 2016',
         language: [
             {
                 tag: 'JS',
@@ -28,7 +28,7 @@ const jsonData = [ //timeline dates
     },
     {
         text: 'Estágiario - Lee Brock Camargo Advogados(LBCA)',
-        date: 'March 04 2019',
+        date: 'Agosto, 2017',
         language: [{
                 tag: 'JS',
                 color: '#ffd63b'
@@ -59,7 +59,7 @@ const jsonData = [ //timeline dates
     },
     {
         text: 'Antlia Serviços de Tecnologia e Informática',
-        date: 'March 07 2019',
+        date: 'Junho, 2019',
         language: [{
 			tag: 'ASP',
 			color: '#000000'
@@ -72,7 +72,7 @@ const jsonData = [ //timeline dates
     {
         text:
             'Muve Digital',
-        date: 'March 18 2019',
+        date: 'Abril, 2021',
         language: [{
                 tag: 'JS',
                 color: '#ffd63b'
