@@ -44,7 +44,7 @@ const Project = () => (
     </div>
     ) : (
         <div>
-            <h3>Ainda nada por aqui! </h3>
+            <h3 style={{textAlign: 'center'}}>Ainda nada por aqui! </h3>
         </div>
     )}
   </div>
