@@ -186,6 +186,15 @@ only screen and (max-width: 479px)  {
         width: 100%;
     }
 
+    .project-container {
+      display: block !important;
+    }
+    
+    .card-image img {
+      width: 100% !important;
+    }
+
+
     .card{
         margin-top: 1rem !important;
         padding: 0.23rem !important;
