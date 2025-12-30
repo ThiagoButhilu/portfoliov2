@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/portfoliov2/static/css/main.8ca0dce0.css",
-    "main.js": "/portfoliov2/static/js/main.8cabd963.js",
+    "main.css": "/portfoliov2/static/css/main.635a3d9e.css",
+    "main.js": "/portfoliov2/static/js/main.02b3c30c.js",
     "static/js/453.e6451621.chunk.js": "/portfoliov2/static/js/453.e6451621.chunk.js",
+    "static/media/vistaClara.png": "/portfoliov2/static/media/vistaClara.da742794367b76f916db.png",
+    "static/media/studyTracker.png": "/portfoliov2/static/media/studyTracker.633c7895a69269a2940c.png",
+    "static/media/thePolittis.png": "/portfoliov2/static/media/thePolittis.a76baf1afff010cad174.png",
     "static/media/Hello.gif": "/portfoliov2/static/media/Hello.d93720933c608f6178fb.gif",
     "static/media/IMG_0273-removebg-preview.png": "/portfoliov2/static/media/IMG_0273-removebg-preview.d2e76499da05d19d5611.png",
-    "static/media/profile.jpg": "/portfoliov2/static/media/profile.2dad349f12210b4d420f.jpg",
+    "static/media/public-domain-vectors-U7qNLqf_Xcs-unsplash.png": "/portfoliov2/static/media/public-domain-vectors-U7qNLqf_Xcs-unsplash.baccec66d4eec4fe7ade.png",
     "static/media/THIAGO_ARAUJO_RODRIGUES.docx": "/portfoliov2/static/media/THIAGO_ARAUJO_RODRIGUES.0503584a25c485024810.docx",
     "static/media/wordpress.png": "/portfoliov2/static/media/wordpress.11ed091523e3152b651f.png",
-    "static/media/illustration.svg": "/portfoliov2/static/media/illustration.cf4b7a67f23b684549c4f797c62b527a.svg",
     "static/media/sass-icon.svg": "/portfoliov2/static/media/sass-icon.8351205a93eafac2e392b26acf7580e1.svg",
     "static/media/mysql-icon.svg": "/portfoliov2/static/media/mysql-icon.e5a509a5d3ca7443ae6ccf379181381d.svg",
     "static/media/typescript-icon.svg": "/portfoliov2/static/media/typescript-icon.17d5e87eac2c9d1dc722ce1e0b60d5df.svg",
     "static/media/whatsapp.svg": "/portfoliov2/static/media/whatsapp.459dad86534ca5699520ed770f3ce605.svg",
     "static/media/bootstrap-icon.svg": "/portfoliov2/static/media/bootstrap-icon.be374cc9bd654654918df2362bcfb240.svg",
     "static/media/react-icon.svg": "/portfoliov2/static/media/react-icon.f1484e295933af0e748d6a01b05a8361.svg",
-    "static/media/telegram.svg": "/portfoliov2/static/media/telegram.45bf2371ee6528cc27d66c08f8e43356.svg",
     "static/media/html-icon.svg": "/portfoliov2/static/media/html-icon.ebfc51e406097a90691ab82f1aa72db3.svg",
     "static/media/github-mark.svg": "/portfoliov2/static/media/github-mark.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "static/media/github-mark-white.svg": "/portfoliov2/static/media/github-mark-white.97ed8e7eef60d61ca469881dd6f34511.svg",
@@ -23,12 +24,12 @@
     "index.html": "/portfoliov2/index.html",
     "static/media/linkedin.svg": "/portfoliov2/static/media/linkedin.4f00d78f67f451cf01173f7418aa186f.svg",
     "static/media/js-icon.svg": "/portfoliov2/static/media/js-icon.ffcf56dc5498f7bbbec802191c740e5f.svg",
-    "main.8ca0dce0.css.map": "/portfoliov2/static/css/main.8ca0dce0.css.map",
-    "main.8cabd963.js.map": "/portfoliov2/static/js/main.8cabd963.js.map",
+    "main.635a3d9e.css.map": "/portfoliov2/static/css/main.635a3d9e.css.map",
+    "main.02b3c30c.js.map": "/portfoliov2/static/js/main.02b3c30c.js.map",
     "453.e6451621.chunk.js.map": "/portfoliov2/static/js/453.e6451621.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ca0dce0.css",
-    "static/js/main.8cabd963.js"
+    "static/css/main.635a3d9e.css",
+    "static/js/main.02b3c30c.js"
   ]
 }
