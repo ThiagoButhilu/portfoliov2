@@ -15,27 +15,37 @@ $blue: #2196F3;
 }
 
 .header_position {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header-fixed {
+  @include transition(all, 0.4s, ease);
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+
+  a {
+    @include transition(color, 0.3s, ease);
+    color: var(--font-color);
   }
 
-  header-fixed {
-    @include transition(all, 0.5s, ease);
-    background-color: rgba(245, 245, 245, 0.5);
-    
-    a {
-      @include transition(all, 0.5s, ease);
-      color: var(--font-color) !important;
-    }
-
-    .menu,
-    .menu:before,
-    .menu:after {
-      background-color: var(--black);
-    }
-
-    .menu.active {
-      background-color: rgba(85, 85, 85, 0);
-    }
+  .menu,
+  .menu:before,
+  .menu:after {
+    background-color: var(--font-color);
+    @include transition(all, 0.3s, ease);
   }
+
+  .menu.active {
+    background-color: transparent;
+  }
+}
+

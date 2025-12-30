@@ -9,7 +9,7 @@ import wordpress from '../../assets/wordpress.png'
 import typescript from '../../assets/typescript-icon.svg'
 import mysql from '../../assets/mysql-icon.svg';
 
-import profile from '../../assets/profile.jpg';
+import profile from '../../assets/public-domain-vectors-U7qNLqf_Xcs-unsplash.png';
 
 import { motion } from "framer-motion";
 
@@ -27,26 +27,32 @@ function Main() {
                 <motion.img src={profile} alt='picture'/>
             </motion.div>
             <div>
-                <motion.div className='about' initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: false }}
-                        transition={{ duration: 0.5, delay: 0.2 }}>
-                    <motion.label 
-                    >
-                        <h2>Sobre mim</h2>
-                    </motion.label>
-                        <motion.p 
-                        
-                        >Olá! Sou Thiago Araujo, desenvolvedor front-end apaixonado por criar interfaces modernas e experiências digitais memoráveis. Com 26 anos e uma paixão inabalável pela tecnologia, dedico-me a transformar designs em realidade através do código.</motion.p>
+                <motion.div
+          className="about"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2>Sobre mim</h2>
 
-                        <motion.p
-                        
-                        >Como desenvolvedor front-end, sou especializado em criar soluções web inovadoras que combinam performance, acessibilidade e design de ponta. Meu foco está em desenvolver aplicações que não apenas funcionam perfeitamente, mas também proporcionam uma experiência única aos usuários.</motion.p>
+          <p>
+            Olá, eu sou <strong>Thiago Rodrigues</strong>, Desenvolvedor Front-end
+            com foco em <strong>React, TypeScript e Next.js</strong>.
+          </p>
 
-                        <motion.p
-                        
-                        >Estou sempre em busca de novos desafios e oportunidades para expandir minhas habilidades técnicas, mantendo-me atualizado com as últimas tendências e tecnologias do mercado.</motion.p>
-                </motion.div>
+          <p>
+            Tenho mais de <strong>6 anos de experiência</strong> criando interfaces
+            modernas, performáticas e escaláveis, sempre aplicando boas práticas
+            e foco na experiência do usuário.
+          </p>
+
+          <ul className="about-list">
+            <li>✔ Interfaces modernas e responsivas</li>
+            <li>✔ Componentização e boas práticas</li>
+            <li>✔ Integração com APIs REST</li>
+          </ul>
+        </motion.div>
+
                 <motion.div 
                         className='about'
                         initial={{ opacity: 0, x: -20 }}

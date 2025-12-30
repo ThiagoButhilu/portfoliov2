@@ -1,12 +1,10 @@
 import { BrowserRouter } from 'react-router-dom'
 import { motion } from "framer-motion"
-import Illustration from "../../assets/illustration.svg"
 import { NavHashLink } from "react-router-hash-link"
 import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github-mark.svg'
 import whatsapp from '../../assets/whatsapp.svg'
 import Hello from '../../assets/Hello.gif'
-import telegram from '../../assets/telegram.svg'
 
 import me from '../../assets/IMG_0273-removebg-preview.png'
 
@@ -85,7 +83,7 @@ export function Intro() {
             transition={{ duration: 0.5, delay: 1 }}>
                <motion.a whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
-                    href="https://www.linkedin.com/in/codevinayak"
+                    href="https://www.linkedin.com/in/thiago-araujo-rodrigues-2a6689134/"
                     target="_blank"
                     rel="noreferrer"
                 >
@@ -93,7 +91,7 @@ export function Intro() {
                 </motion.a>
                     <motion.a whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                    href="https://github.com/CodeVinayak/"
+                    href="https://github.com/ThiagoButhilu"
                     target="_blank"
                     rel="noreferrer"
                     >
@@ -101,20 +99,13 @@ export function Intro() {
                     </motion.a>
                     <motion.a whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                    href="https://api.whatsapp.com/send/?phone=%2B919630576848&text=Hello+Vinayak+I+found+your+contact+through+portfolio+site.%0A%0A"
+                    href="https://wa.me/5511958722569?text=Olá!%20Vi%20seu%20portfólio."
                     target="_blank"
                     rel="noreferrer"
                     >
                     <img src={whatsapp} alt="Whatsapp" />
                     </motion.a>
-                    <motion.a whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                    href="https://t.me/CodeVinayak"
-                    target="_blank"
-                    rel="noreferrer"
-                    >
-                    <img src={telegram} alt="telegram" />
-                    </motion.a> 
+                  
             </motion.div>
         </div>
           <div>
