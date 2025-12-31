@@ -4,10 +4,11 @@ import css from '../../assets/css-icon.svg';
 import js from '../../assets/js-icon.svg';
 import bootstrap from '../../assets/bootstrap-icon.svg';
 import react from '../../assets/react-icon.svg';
-import sass from '../../assets/sass-icon.svg'
 import wordpress from '../../assets/wordpress.png'
 import typescript from '../../assets/typescript-icon.svg'
 import mysql from '../../assets/mysql-icon.svg';
+import tailwind from '../../assets/tailwind.png'
+import vue from '../../assets/Vue.js_Logo_2.svg.png'
 
 import profile from '../../assets/public-domain-vectors-U7qNLqf_Xcs-unsplash.png';
 
@@ -64,13 +65,13 @@ function Main() {
                     <div className='container-img'>
                         <img src={html} alt='html'/>
                         <img src={css} alt='css'/>
-                        <img src={sass} alt='css'/>
+                        <img src={tailwind} alt='tailwind'/>
                         <img src={js} alt='js'/>
                         <img src={typescript} alt='js'/>
                         <img src={bootstrap} alt='bootstrap'/>
                         <img src={react} alt='react'/>
                         <img src={mysql} alt='mysql'/>
-                        <img src={wordpress} alt='wordpress'/>
+                        <img src={vue} alt='vue'/>
                     </div>
                 </motion.div>
             </div>

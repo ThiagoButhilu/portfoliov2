@@ -134,7 +134,7 @@ initial={{ opacity: 0, scale: 0.5 }}
 
 const Timeline = () => (
     jsonData.length > 0 && (
-        <div className="body-container" id="experiences">
+        <div className="body-container" style={{backgroundColor: '#fff'}} id="experiences">
             <h1>experiências</h1>
             <div className="timeline-container">
                 {jsonData.map((data, idx) => (
