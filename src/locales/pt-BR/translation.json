@@ -1,0 +1,88 @@
+{
+  "header": {
+    "home": "Inicio",
+    "about": "Sobre mim",
+    "projects": "Projetos",
+    "experiences": "experiências",
+    "contact": "Contato",
+    "resume": "Curriculo"
+  },
+  "intro": {
+    "greeting": "Olá",
+    "iAm": "Sou",
+    "name": "Thiago Araujo",
+    "title": "Desenvolvedor Front-End",
+    "experience": "6 anos de experiência",
+    "contactButton": "Contato"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description1": "Olá, eu sou <strong>Thiago Rodrigues</strong>, Desenvolvedor Front-end com foco em <strong>React, TypeScript e Next.js</strong>.",
+    "description2": "Tenho mais de <strong>6 anos de experiência</strong> criando interfaces modernas, performáticas e escaláveis, sempre aplicando boas práticas e foco na experiência do usuário.",
+    "skillsTitle": "Principais habilidades",
+    "skill1": "Interfaces modernas e responsivas",
+    "skill2": "Componentização e boas práticas",
+    "skill3": "Integração com APIs REST"
+  },
+  "projects": {
+    "title": "Meus projetos",
+    "subtitle": "Alguns projetos que desenvolvi recentemente",
+    "viewProject": "Ver projeto →",
+    "items": {
+      "studyTracker": {
+        "name": "Study Tracker",
+        "description": "Aplicação para controle de estudos com Vue, Pinia e Tailwind."
+      },
+      "landingPage": {
+        "name": "Landing Page Ótica",
+        "description": "Landing Page para ótica fictícia usando React e Tailwind."
+      },
+      "ecommerce": {
+        "name": "E-commerce de doces",
+        "description": "E-commerce de doceria usando Next.js e Tailwind."
+      },
+      "crud": {
+        "name": "CRUD com Study tracker",
+        "description": "Uma versão do Study tracker com CRUD feita em Vue (typescript), Pinia e Tailwind."
+      }
+    }
+  },
+  "timeline": {
+    "title": "experiências",
+    "items": {
+      "tim1": {
+        "text": "Menor Aprendiz - Infraestrutura - TIM Brasil",
+        "date": "Agosto, 2016"
+      },
+      "tim2": {
+        "text": "Estágiario - Lee Brock Camargo Advogados(LBCA)",
+        "date": "Agosto, 2017"
+      },
+      "tim3": {
+        "text": "Antlia Serviços de Tecnologia e Informática",
+        "date": "Junho, 2019"
+      },
+      "tim4": {
+        "text": "Muve Digital",
+        "date": "Abril, 2021"
+      }
+    }
+  },
+  "contact": {
+    "title": "Entre em contato",
+    "subtitle": "Vamos criar seu projeto?",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar",
+    "success": "Mensagem enviada, entrarei em contato em breve!",
+    "error": "Algo deu errado!"
+  },
+  "footer": {
+    "rights": "© {{year}} Thiago Araujo. All rights reserved."
+  },
+  "whatsapp": {
+    "message": "Olá! Vi seu portfólio."
+  }
+}
+

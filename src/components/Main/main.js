@@ -13,9 +13,11 @@ import vue from '../../assets/Vue.js_Logo_2.svg.png'
 import profile from '../../assets/public-domain-vectors-U7qNLqf_Xcs-unsplash.png';
 
 import { motion } from "framer-motion";
+import { useTranslation, Trans } from "react-i18next";
 
 
 function Main() {
+    const { t } = useTranslation();
     return (
         <div className="container main" id='about' name='about'>
             <motion.div
@@ -34,23 +36,20 @@ function Main() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2>Sobre mim</h2>
+          <h2>{t('about.title')}</h2>
 
           <p>
-            Olá, eu sou <strong>Thiago Rodrigues</strong>, Desenvolvedor Front-end
-            com foco em <strong>React, TypeScript e Next.js</strong>.
+            <Trans i18nKey="about.description1" components={{ strong: <strong /> }} />
           </p>
 
           <p>
-            Tenho mais de <strong>6 anos de experiência</strong> criando interfaces
-            modernas, performáticas e escaláveis, sempre aplicando boas práticas
-            e foco na experiência do usuário.
+            <Trans i18nKey="about.description2" components={{ strong: <strong /> }} />
           </p>
 
           <ul className="about-list">
-            <li>✔ Interfaces modernas e responsivas</li>
-            <li>✔ Componentização e boas práticas</li>
-            <li>✔ Integração com APIs REST</li>
+            <li>✔ {t('about.skill1')}</li>
+            <li>✔ {t('about.skill2')}</li>
+            <li>✔ {t('about.skill3')}</li>
           </ul>
         </motion.div>
 
@@ -61,7 +60,7 @@ function Main() {
                         viewport={{ once: false }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <label><h2>Principais habilidades</h2></label>
+                    <label><h2>{t('about.skillsTitle')}</h2></label>
                     <div className='container-img'>
                         <img src={html} alt='html'/>
                         <img src={css} alt='css'/>

@@ -71,15 +71,18 @@
 }
 
 .project-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #6d5dfc;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
 }
 
 .project-header p {
   margin-top: 12px;
-  color: #b5b7ff;
-  font-size: 1.75rem;
+  color: #6b7280;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 /* GRID */
@@ -102,21 +105,36 @@
 /* IMAGE HEADER */
 .card-image {
   width: 100%;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease;
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-content:hover .card-image img {
+  transform: scale(1.05);
 }
 
 /* CONTENT */
 .card-content {
-  padding: 20px;
+  padding: 24px;
   background-color: #fff;
-  border-radius: 4%;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(109, 93, 252, 0.1);
+}
+
+.card-content:hover {
+  box-shadow: 0 10px 25px rgba(109, 93, 252, 0.15), 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 .card-title {
@@ -129,19 +147,31 @@
   font-size: 1.92rem;
   font-weight: 600;
   color: #6d5dfc;
+  transition: color 0.3s ease;
+}
+
+.card-content:hover .card-title h2 {
+  color: #5a4dd9;
 }
 
 .card-title img {
-  width: 22px;
+  width: 24px;
   opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-content:hover .card-title img {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 /* DESCRIPTION */
 .card-description {
   margin: 12px 0 16px;
   font-size: 1.45rem;
-  line-height: 1.5;
-  color: #cfd2ff;
+  line-height: 1.6;
+  color: #6b7280;
+  min-height: 60px;
 }
 
 /* TAGS */
@@ -154,25 +184,38 @@
 }
 
 .card-tags span {
-  font-size: 1.45rem;
-  padding: 6px 12px;
+  font-size: 1.3rem;
+  padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(109, 93, 252, 0.15);
-  color: #bdb8ff;
+  background: linear-gradient(135deg, rgba(109, 93, 252, 0.1), rgba(109, 93, 252, 0.15));
+  color: #6d5dfc;
+  font-weight: 500;
+  border: 1px solid rgba(109, 93, 252, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card-tags span:hover {
+  background: rgba(109, 93, 252, 0.2);
+  transform: translateY(-2px);
 }
 
 /* LINK */
 .card-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.5rem;
   color: #6d5dfc;
   text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 8px;
 }
 
 .card-link:hover {
-  opacity: 0.8;
+  color: #5a4dd9;
+  gap: 12px;
+  transform: translateX(4px);
 }
 
 

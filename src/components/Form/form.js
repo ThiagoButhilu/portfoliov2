@@ -1,6 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 import { motion } from "framer-motion"
+import { useTranslation } from 'react-i18next'
 
 
 const service_id = "service_up8t7fu"
@@ -9,6 +10,7 @@ const template_id = "template_ic71vjh"
 
 
 export function ContactForm() {
+    const { t } = useTranslation();
     const [isSend, setIsSend] = useState(false)
     
 
@@ -19,7 +21,7 @@ const handleOnSubmit = (e) => {
          setIsSend(true)
        }, (error) => {
          console.log(error.text);
-         alert('Algo deu errado! ')
+         alert(t('contact.error'))
        });
      e.target.reset()
    };
@@ -30,25 +32,25 @@ const handleOnSubmit = (e) => {
                 <div className="form">
                     <div className="card-image">	
                         <h2 className="card-heading">
-                            Entre em contato
-                            <small>Vamos criar seu projeto?</small>
+                            {t('contact.title')}
+                            <small>{t('contact.subtitle')}</small>
                         </h2>
                     </div>
                     <form onSubmit={handleOnSubmit} className="card-form">
                         <div className="input">
                             <input type="text" name='name' id='name' className="input-field" required/>
-                            <label className="input-label">Nome</label>
+                            <label className="input-label">{t('contact.name')}</label>
                         </div>
                         <div className="input">
                             <input type="text" name='byEmail' id='byEmail' className="input-field" required/>
-                            <label className="input-label">Email</label>
+                            <label className="input-label">{t('contact.email')}</label>
                         </div>
                         <div className="input">
                             <textarea className="input-field" name='message' id='message' required></textarea>
-                            <label className="input-label">Mensagem</label>
+                            <label className="input-label">{t('contact.message')}</label>
                         </div>
                         <div className="action">
-                            <button type='submit' className="action-button">Enviar</button>
+                            <button type='submit' className="action-button">{t('contact.send')}</button>
                         </div>
                     </form>
                 </div>
@@ -57,7 +59,7 @@ const handleOnSubmit = (e) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.4 }} className="success-message">
-                    Mensagem enviada, entrarei em contato em breve!
+                    {t('contact.success')}
                 </motion.div>
             )}
         </div>

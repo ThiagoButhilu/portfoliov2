@@ -3,11 +3,12 @@ import githubIcon from '../../assets/github-mark-white.svg'
 import whatsapp from '../../assets/whatsapp.svg'
 
 import { motion } from "framer-motion";
+import { useTranslation } from 'react-i18next';
 
 
 
 function Footer() {
-
+    const { t } = useTranslation();
     const fullYear = new Date().getFullYear();
 
     return(
@@ -16,7 +17,7 @@ function Footer() {
             
            </div>
            <div>
-                <p>© {fullYear} Thiago Araujo. All rights reserved.</p>   
+                <p>{t('footer.rights', { year: fullYear })}</p>   
            </div>
            <div className='img_container '>
             <div className='social-media'>
@@ -38,7 +39,7 @@ function Footer() {
                     </motion.a>
                     <motion.a whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                    href="https://wa.me/5511958722569?text=Olá!%20Vi%20seu%20portfólio."
+                    href={`https://wa.me/5511958722569?text=${encodeURIComponent(t('whatsapp.message'))}`}
                     target="_blank"
                     rel="noreferrer"
                     >

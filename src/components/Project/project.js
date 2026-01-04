@@ -1,5 +1,6 @@
 import githubIcon from '../../assets/github-mark-white.svg'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 import studyTracker from '../../assets/studyTracker.png'
 import thePolittis from '../../assets/thePolittis.png'
@@ -8,52 +9,52 @@ import studyTrackerCrud from '../../assets/studyTrackerCrud.png'
 
 // imagens dos projetos
 
-
-const projects = [
-  {
-    name: 'Study Tracker',
-    description: 'Aplicação para controle de estudos com Vue, Pinia e Tailwind.',
-    link: 'https://github.com/ThiagoButhilu/study-trecker',
-    languages: ['Vue', 'Pinia', 'Tailwind'],
-    image: studyTracker
-  },
-  {
-    name: 'Landing Page Ótica',
-    description: 'Landing Page para ótica fictícia usando React e Tailwind.',
-    link: 'https://github.com/ThiagoButhilu/visual-landing-page',
-    languages: ['React', 'Tailwind', 'JavaScript'],
-    image: vistaClara
-  },
-  {
-    name: 'E-commerce de doces',
-    description: 'E-commerce de doceria usando Next.js e Tailwind.',
-    link: 'https://thepolittis.com',
-    languages: ['Next.js', 'Tailwind', 'TypeScript'],
-    image: thePolittis
-  },
-  {
-    name: 'CRUD com Study tracker',
-    description: 'Uma versão do Study tracker com CRUD feita em Vue (typescript), Pinia e Tailwind.',
-    link: 'https://thepolittis.com',
-    languages: ['Vue', 'Pinia', 'Tailwind', 'TypeScript'],
-    image: studyTrackerCrud
-  }
-]
-
 const Project = () => {
+  const { t } = useTranslation();
+
+  const projects = [
+    {
+      name: t('projects.items.studyTracker.name'),
+      description: t('projects.items.studyTracker.description'),
+      link: 'https://github.com/ThiagoButhilu/study-trecker',
+      languages: ['Vue', 'Pinia', 'Tailwind'],
+      image: studyTracker
+    },
+    {
+      name: t('projects.items.landingPage.name'),
+      description: t('projects.items.landingPage.description'),
+      link: 'https://github.com/ThiagoButhilu/visual-landing-page',
+      languages: ['React', 'Tailwind', 'JavaScript'],
+      image: vistaClara
+    },
+    {
+      name: t('projects.items.ecommerce.name'),
+      description: t('projects.items.ecommerce.description'),
+      link: 'https://thepolittis.com',
+      languages: ['Next.js', 'Tailwind', 'TypeScript'],
+      image: thePolittis
+    },
+    {
+      name: t('projects.items.crud.name'),
+      description: t('projects.items.crud.description'),
+      link: 'https://thepolittis.com',
+      languages: ['Vue', 'Pinia', 'Tailwind', 'TypeScript'],
+      image: studyTrackerCrud
+    }
+  ]
   return (
     <section className="project-container" id="projects">
       {/* Header */}
       <header className="project-header">
-        <h1>Meus projetos</h1>
-        <p>Alguns projetos que desenvolvi recentemente</p>
+        <h1>{t('projects.title')}</h1>
+        <p>{t('projects.subtitle')}</p>
       </header>
 
       {/* Grid */}
       <div className="project-grid">
         {projects.map((project, index) => (
           <motion.div
-            className='card-content'
+            className='project-card'
             key={project.name}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,40 +62,37 @@ const Project = () => {
             viewport={{ once: false }}
             whileHover={{ scale: 1.03 }}
           >
-           
-              
-              {/* Image Header */}
-              <div className="card-image">
-                <img src={project.image} alt='' />
+            {/* Image Header */}
+            <div className="card-image">
+              <img src={project.image} alt={project.name} />
+            </div>
+
+            {/* Card Content */}
+            <div className="card-content">
+              <div className="card-title">
+                <h2>{project.name}</h2>
+                <img src={githubIcon} alt="GitHub" />
               </div>
 
-              {/* Card Content */}
-              <div className="card-content">
-                <div className="card-title">
-                  <h2>{project.name}</h2>
-                  <img src={githubIcon} alt="GitHub" />
-                </div>
+              <p className="card-description">
+                {project.description}
+              </p>
 
-                <p className="card-description">
-                  {project.description}
-                </p>
-
-                <div className="card-tags">
-                  {project.languages.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
-
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card-link"
-                >
-                  Ver projeto →
-                </a>
+              <div className="card-tags">
+                {project.languages.map((tech) => (
+                  <span key={tech}>{tech}</span>
+                ))}
               </div>
-            
+
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-link"
+              >
+                {t('projects.viewProject')}
+              </a>
+            </div>
           </motion.div>
         ))}
       </div>

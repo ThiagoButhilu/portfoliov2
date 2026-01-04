@@ -23,7 +23,7 @@ $blue: #2196F3;
   z-index: 1000;
 }
 
-header-fixed {
+.header-fixed {
   @include transition(all, 0.4s, ease);
 
   background: rgba(255, 255, 255, 0.15);
@@ -47,6 +47,46 @@ header-fixed {
 
   .menu.active {
     background-color: transparent;
+  }
+
+  .language-toggle {
+    display: flex !important;
+    gap: 0.8rem;
+    margin-left: 1.5rem;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(102, 88, 211, 0.3);
+      color: var(--font-color);
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+      min-width: 5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background: rgba(102, 88, 211, 0.1);
+        border-color: rgba(102, 88, 211, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(102, 88, 211, 0.2);
+      }
+
+      &.active {
+        background: var(--green);
+        color: var(--background);
+        border-color: var(--green);
+        box-shadow: 0 4px 12px rgba(102, 88, 211, 0.4);
+        font-weight: 700;
+      }
+    }
   }
 }
 

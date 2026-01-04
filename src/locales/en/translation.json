@@ -1,0 +1,88 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "intro": {
+    "greeting": "Hello",
+    "iAm": "I'm",
+    "name": "Thiago Araujo",
+    "title": "Front-End Developer",
+    "experience": "6 years of experience",
+    "contactButton": "Contact"
+  },
+  "about": {
+    "title": "About me",
+    "description1": "Hello, I'm <strong>Thiago Rodrigues</strong>, Front-end Developer focused on <strong>React, TypeScript and Next.js</strong>.",
+    "description2": "I have over <strong>6 years of experience</strong> creating modern, performant and scalable interfaces, always applying best practices and focusing on user experience.",
+    "skillsTitle": "Main skills",
+    "skill1": "Modern and responsive interfaces",
+    "skill2": "Componentization and best practices",
+    "skill3": "REST API integration"
+  },
+  "projects": {
+    "title": "My projects",
+    "subtitle": "Some projects I've developed recently",
+    "viewProject": "View project →",
+    "items": {
+      "studyTracker": {
+        "name": "Study Tracker",
+        "description": "Study tracking application with Vue, Pinia and Tailwind."
+      },
+      "landingPage": {
+        "name": "Optics Landing Page",
+        "description": "Landing page for a fictional optics store using React and Tailwind."
+      },
+      "ecommerce": {
+        "name": "Candy E-commerce",
+        "description": "Candy store e-commerce using Next.js and Tailwind."
+      },
+      "crud": {
+        "name": "CRUD with Study tracker",
+        "description": "A version of Study tracker with CRUD made in Vue (typescript), Pinia and Tailwind."
+      }
+    }
+  },
+  "timeline": {
+    "title": "Experiences",
+    "items": {
+      "tim1": {
+        "text": "Junior Apprentice - Infrastructure - TIM Brasil",
+        "date": "August, 2016"
+      },
+      "tim2": {
+        "text": "Intern - Lee Brock Camargo Advogados(LBCA)",
+        "date": "August, 2017"
+      },
+      "tim3": {
+        "text": "Antlia Technology and IT Services",
+        "date": "June, 2019"
+      },
+      "tim4": {
+        "text": "Muve Digital",
+        "date": "April, 2021"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Let's create your project?",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "success": "Message sent, I'll get back to you soon!",
+    "error": "Something went wrong!"
+  },
+  "footer": {
+    "rights": "© {{year}} Thiago Araujo. All rights reserved."
+  },
+  "whatsapp": {
+    "message": "Hello! I saw your portfolio."
+  }
+}
+

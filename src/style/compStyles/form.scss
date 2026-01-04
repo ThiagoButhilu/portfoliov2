@@ -18,9 +18,10 @@
 	width: 100%;
 	max-width: 758px;
 	background-color: #FFF;
-	border-radius: 10px;
-	box-shadow: 0 10px 20px 0 rgba(#999, .25);
-	padding: 1.75rem;
+	border-radius: 16px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+	padding: 2.5rem;
+	transition: box-shadow 0.3s ease;
 
     img {
 	    max-width: 100%;
@@ -34,7 +35,7 @@
 
 
     .card-image {
-	border-radius: 8px;
+	border-radius: 12px;
 	overflow: hidden;
 	padding-bottom: 33%;
 	background-image: url('https://assets.codepen.io/285131/coffee_1.jpg');
@@ -42,6 +43,7 @@
 	background-size: 130%;
     background-position: -6px 39%;
 	position: relative;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
     .card-heading {
 	position: absolute;
@@ -52,6 +54,7 @@
 	font-weight: 700;
 	color: #735400;
 	line-height: 1.222;
+	text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 	small {
 		display: block;
 		font-size: 1.75em;
@@ -110,13 +113,23 @@
 .action-button {
 	font: inherit;
 	font-size: 1.55rem;
-	padding: 1em;
+	padding: 1.2em;
 	width: 100%;
-	font-weight: 500;
-	background-color: #6658d3;
-	border-radius: 6px;
+	font-weight: 600;
+	background: linear-gradient(135deg, #6658d3 0%, #8b7ff0 100%);
+	border-radius: 8px;
 	color: #FFF;
 	border: 0;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(102, 88, 211, 0.3);
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(102, 88, 211, 0.4);
+	}
+	&:active {
+		transform: translateY(0);
+	}
 	&:focus {
 		outline: 0;
 	}
@@ -135,28 +148,34 @@
 }
 
 .success-message{
-	background-color: white;
-    padding: 5rem;
-    border-radius: 1rem;
-    font-size: larger;
+	background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+    padding: 4rem;
+    border-radius: 16px;
+    font-size: 1.8rem;
 	color: #6658d3;
+	font-weight: 600;
+	text-align: center;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	border: 2px solid rgba(102, 88, 211, 0.2);
 }
 
 @media only screen and (max-width: 959px),
 only screen and (min-width: 768px) and (max-width: 959px),
 only screen and (max-width: 767px),
 only screen and (max-width: 479px) {
-	.container-form {
-		margin: 2rem;
-	}
+	
 
-	.card-heading {
-		font-size: 1.50rem !important;
-		color: rgb(40, 40, 40) !important;
-		font-weight: 700 !important;
-
-		small {
+	.card-image {
+		.card-heading {
+			font-size: 1.50rem !important;
+			color: #735400 !important;
 			font-weight: 700 !important;
+			text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3) !important;
+
+			small {
+				font-weight: 300 !important;
+				font-size: 1.4rem !important;
+			}
 		}
 	}
 }

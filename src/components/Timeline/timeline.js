@@ -1,12 +1,16 @@
 
 import React from "react";
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 //https://codepen.io/FlorinPop17/pen/GLEPZy
 
-const jsonData = [ //timeline dates
+const Timeline = () => {
+    const { t } = useTranslation();
+
+    const jsonData = [ //timeline dates
     {
-        text: 'Menor Aprendiz - Infraestrutura - TIM Brasil',
-        date: 'Agosto, 2016',
+        text: t('timeline.items.tim1.text'),
+        date: t('timeline.items.tim1.date'),
         language: [
             {
                 tag: 'JS',
@@ -27,8 +31,8 @@ const jsonData = [ //timeline dates
         ]
     },
     {
-        text: 'Estágiario - Lee Brock Camargo Advogados(LBCA)',
-        date: 'Agosto, 2017',
+        text: t('timeline.items.tim2.text'),
+        date: t('timeline.items.tim2.date'),
         language: [{
                 tag: 'JS',
                 color: '#ffd63b'
@@ -58,8 +62,8 @@ const jsonData = [ //timeline dates
         ]
     },
     {
-        text: 'Antlia Serviços de Tecnologia e Informática',
-        date: 'Junho, 2019',
+        text: t('timeline.items.tim3.text'),
+        date: t('timeline.items.tim3.date'),
         language: [{
 			tag: 'ASP',
 			color: '#000000'
@@ -70,9 +74,8 @@ const jsonData = [ //timeline dates
         }]
     },
     {
-        text:
-            'Muve Digital',
-        date: 'Abril, 2021',
+        text: t('timeline.items.tim4.text'),
+        date: t('timeline.items.tim4.date'),
         language: [{
                 tag: 'JS',
                 color: '#ffd63b'
@@ -100,7 +103,6 @@ const jsonData = [ //timeline dates
         ]
     }
 ]
-
 
 const TimelineItem = ({ data }) => (
   <motion.div 
@@ -132,17 +134,18 @@ initial={{ opacity: 0, scale: 0.5 }}
     </motion.div>
 );
 
-const Timeline = () => (
-    jsonData.length > 0 && (
-        <div className="body-container" style={{backgroundColor: '#fff'}} id="experiences">
-            <h1>experiências</h1>
-            <div className="timeline-container">
-                {jsonData.map((data, idx) => (
-                    <TimelineItem data={data} key={idx} />
-                ))}
+    return (
+        jsonData.length > 0 && (
+            <div className="body-container" style={{backgroundColor: '#fff'}} id="experiences">
+                <h1>{t('timeline.title')}</h1>
+                <div className="timeline-container">
+                    {jsonData.map((data, idx) => (
+                        <TimelineItem data={data} key={idx} />
+                    ))}
+                </div>
             </div>
-        </div>
-    )
-);
+        )
+    );
+};
 
 export {Timeline}

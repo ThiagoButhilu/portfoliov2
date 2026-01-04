@@ -110,6 +110,12 @@ h3{
       }
     }
 
+    .language-toggle {
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+    }
+
     .menu-container {
       cursor: pointer;
       padding: 0.6rem 0;
@@ -232,6 +238,27 @@ h3{
       background-color: var(--green);
       a.button {
         background-color: var(--pink);
+      }
+
+      .language-toggle {
+        margin-top: 2rem;
+        display: flex !important;
+        gap: 1rem;
+        
+        .lang-btn {
+          padding: 1rem 2rem;
+          font-size: 1.6rem;
+          min-width: 6rem;
+          background: rgba(255, 255, 255, 0.2);
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          color: var(--background);
+          
+          &.active {
+            background: var(--background);
+            color: var(--green);
+            border-color: var(--background);
+          }
+        }
       }
 
       &.active {

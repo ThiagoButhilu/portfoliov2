@@ -7,11 +7,21 @@
 
   .about {
     color: var(--background) !important;
-    background-color: var(--green) !important;
-    border-radius: 10px;
+    background: linear-gradient(135deg, var(--green) 0%, #8b7ff0 100%);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 24px rgba(102, 88, 211, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(102, 88, 211, 0.3);
+    }
 
     h2{
       color: var(--background);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -61,18 +71,29 @@
 /* SKILLS */
 .container-img {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
 
   img {
-    width: 4.8rem;
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
     opacity: 0.85;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      transform: scale(1.15);
+      transform: scale(1.15) translateY(-4px);
       opacity: 1;
+      box-shadow: 0 4px 12px rgba(102, 88, 211, 0.3);
     }
   }
 }

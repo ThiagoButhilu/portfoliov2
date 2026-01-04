@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import { motion } from "framer-motion"
 import { NavHashLink } from "react-router-hash-link"
+import { useTranslation } from 'react-i18next'
 import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github-mark.svg'
 import whatsapp from '../../assets/whatsapp.svg'
@@ -10,7 +11,8 @@ import me from '../../assets/IMG_0273-removebg-preview.png'
 
 
 export function Intro() {
-  const titleName = "Thiago Araujo";
+  const { t } = useTranslation();
+  const titleName = t('intro.name');
 
   return (
     <div className="container intro" id="home">
@@ -25,7 +27,7 @@ export function Intro() {
           }}
           transition={{ duration: 0.5, delay: 0 }}
         >
-          Olá <img src={Hello} alt="Hello" width="20px"/>, Sou
+          {t('intro.greeting')} <img src={Hello} alt="Hello" width="20px"/>, {t('intro.iAm')}
         </motion.p>
         
         <motion.h1
@@ -43,7 +45,7 @@ export function Intro() {
           viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          Desenvolvedor Front-End
+          {t('intro.title')}
         </motion.h3>
         
         <motion.p
@@ -54,7 +56,7 @@ export function Intro() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <div className="text-red-500 p-4">
-            6 anos de experiência
+            {t('intro.experience')}
           </div>
         </motion.p>
         
@@ -66,7 +68,7 @@ export function Intro() {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <BrowserRouter>
-            <NavHashLink smooth to="#form">Contato</NavHashLink>
+            <NavHashLink smooth to="#form">{t('intro.contactButton')}</NavHashLink>
           </BrowserRouter>
         </motion.div>
         
@@ -99,7 +101,7 @@ export function Intro() {
                     </motion.a>
                     <motion.a whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                    href="https://wa.me/5511958722569?text=Olá!%20Vi%20seu%20portfólio."
+                    href={`https://wa.me/5511958722569?text=${encodeURIComponent(t('whatsapp.message'))}`}
                     target="_blank"
                     rel="noreferrer"
                     >
