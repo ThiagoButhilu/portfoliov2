@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import studyTracker from '../../assets/studyTracker.png'
 import thePolittis from '../../assets/thePolittis.png'
 import vistaClara from '../../assets/vistaClara.png'
+import studyTrackerCrud from '../../assets/studyTrackerCrud.png'
 
 // imagens dos projetos
 
@@ -29,6 +30,13 @@ const projects = [
     link: 'https://thepolittis.com',
     languages: ['Next.js', 'Tailwind', 'TypeScript'],
     image: thePolittis
+  },
+  {
+    name: 'CRUD com Study tracker',
+    description: 'Uma versão do Study tracker com CRUD feita em Vue (typescript), Pinia e Tailwind.',
+    link: 'https://thepolittis.com',
+    languages: ['Vue', 'Pinia', 'Tailwind', 'TypeScript'],
+    image: studyTrackerCrud
   }
 ]
 
