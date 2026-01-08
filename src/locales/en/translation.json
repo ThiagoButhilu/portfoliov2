@@ -29,6 +29,10 @@
     "subtitle": "Some projects I've developed recently",
     "viewProject": "View project →",
     "items": {
+      "luanTattoo": {
+        "name": "Luan Tattoo Landing Page",
+        "description": "Landing page for a fictional tattoo artist using React and Tailwind."
+      },
       "studyTracker": {
         "name": "Study Tracker",
         "description": "Study tracking application with Vue, Pinia and Tailwind."

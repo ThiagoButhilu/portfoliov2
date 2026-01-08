@@ -33,6 +33,10 @@
         "name": "Study Tracker",
         "description": "Aplicação para controle de estudos com Vue, Pinia e Tailwind."
       },
+      "luanTattoo": {
+        "name": "Landing Page de Tatuagem",
+        "description": "Landing Page para um tatuador fictício usando React e Tailwind."
+      },
       "landingPage": {
         "name": "Landing Page Ótica",
         "description": "Landing Page para ótica fictícia usando React e Tailwind."

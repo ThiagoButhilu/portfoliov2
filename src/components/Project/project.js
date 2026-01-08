@@ -6,6 +6,7 @@ import studyTracker from '../../assets/studyTracker.png'
 import thePolittis from '../../assets/thePolittis.png'
 import vistaClara from '../../assets/vistaClara.png'
 import studyTrackerCrud from '../../assets/studyTrackerCrud.png'
+import luanTattoo from '../../assets/luanTattoo.png'
 
 // imagens dos projetos
 
@@ -37,9 +38,16 @@ const Project = () => {
     {
       name: t('projects.items.crud.name'),
       description: t('projects.items.crud.description'),
-      link: 'https://thepolittis.com',
+      link: 'https://github.com/ThiagoButhilu/crud-study-tracker',
       languages: ['Vue', 'Pinia', 'Tailwind', 'TypeScript'],
       image: studyTrackerCrud
+    },
+    {
+      name: t('projects.items.luanTattoo.name'),
+      description: t('projects.items.luanTattoo.description'),
+      link: 'https://thiagobuthilu.github.io/landing-page-tattoo/',
+      languages: ['React', 'Tailwind'],
+      image: luanTattoo
     }
   ]
   return (

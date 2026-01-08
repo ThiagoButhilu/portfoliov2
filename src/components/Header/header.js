@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 import Typing from './../typing'
 import mouseClick from '../../assets/White.png'
-import resume from '../../assets/THIAGO_ARAUJO_RODRIGUES.docx'
+import resume from '../../assets/thiago-araujo-rodrigues.pdf'
 
 function Header() {
     const { t, i18n } = useTranslation();
