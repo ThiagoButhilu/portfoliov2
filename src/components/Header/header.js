@@ -40,7 +40,7 @@ function Header() {
                     <NavHashLink to={"/#form"} smooth>
                         {t('header.contact')}
                     </NavHashLink>
-                    <a href={resume} download className='button'>
+                    <a href={resume} download="Curriculo_Thiago_Atualizado.pdf" className='button'>
                         {t('header.resume')}
                     </a>
                     <div className="language-toggle">

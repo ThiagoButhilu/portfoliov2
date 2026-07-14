@@ -11,18 +11,18 @@
     "greeting": "Olá",
     "iAm": "Sou",
     "name": "Thiago Araujo",
-    "title": "Desenvolvedor Front-End",
-    "experience": "6 anos de experiência",
+    "title": "Engenheiro de Software",
+    "experience": "Mais de 8 anos de experiência",
     "contactButton": "Contato"
   },
   "about": {
     "title": "Sobre mim",
-    "description1": "Olá, eu sou <strong>Thiago Rodrigues</strong>, Desenvolvedor Front-end com foco em <strong>React, TypeScript e Next.js</strong>.",
-    "description2": "Tenho mais de <strong>6 anos de experiência</strong> criando interfaces modernas, performáticas e escaláveis, sempre aplicando boas práticas e foco na experiência do usuário.",
+    "description1": "Olá, eu sou <strong>Thiago Araujo Rodrigues</strong>, Engenheiro de Software especializado em <strong>React, Next.js, TypeScript e React Native</strong>.",
+    "description2": "Tenho mais de <strong>8 anos de experiência</strong> desenvolvendo aplicações web e mobile, atuando em projetos corporativos para grandes empresas e órgãos governamentais, com foco em performance, arquitetura, escalabilidade e qualidade de código.",
     "skillsTitle": "Principais habilidades",
-    "skill1": "Interfaces modernas e responsivas",
-    "skill2": "Componentização e boas práticas",
-    "skill3": "Integração com APIs REST"
+    "skill1": "Desenvolvimento web e mobile com React, Next.js e React Native",
+    "skill2": "Backend com Groovy/Grails, SQL e integrações REST",
+    "skill3": "Refatoração de sistemas legados e arquitetura escalável"
   },
   "projects": {
     "title": "Meus projetos",
@@ -55,20 +55,20 @@
     "title": "experiências",
     "items": {
       "tim1": {
-        "text": "Menor Aprendiz - Infraestrutura - TIM Brasil",
-        "date": "Agosto, 2016"
+        "text": "Menor Aprendiz — TIM Brasil",
+        "date": "2015 – 2016"
       },
       "tim2": {
-        "text": "Estágiario - Lee Brock Camargo Advogados(LBCA)",
-        "date": "Agosto, 2017"
+        "text": "Estagiário de Desenvolvimento — LBCA",
+        "date": "2017 – 2018"
       },
       "tim3": {
-        "text": "Antlia Serviços de Tecnologia e Informática",
-        "date": "Junho, 2019"
+        "text": "Desenvolvedor — Antlia (Projeto Itaú)",
+        "date": "2018 – 2020"
       },
       "tim4": {
-        "text": "Muve Digital",
-        "date": "Abril, 2021"
+        "text": "Desenvolvedor Full Stack — Muve Digital",
+        "date": "2021 – Atual"
       }
     }
   },

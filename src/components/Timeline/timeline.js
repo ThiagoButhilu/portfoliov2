@@ -89,16 +89,16 @@ const Timeline = () => {
                 color: '#ff4a2b'
             },
             {
-                tag: 'Grails',
-                color: '#db8e81'
-            },
-            {
-                tag: 'Bootstrap',
-                color: '#563c76'
-            },
-            {
                 tag: 'React',
                 color: '#48dbf9'
+            },
+            {
+                tag: 'TS',
+                color: '#007acc'
+            },
+            {
+                tag: 'Grails',
+                color: '#db8e81'
             }
         ]
     }

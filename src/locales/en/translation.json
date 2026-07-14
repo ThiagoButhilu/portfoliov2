@@ -11,18 +11,18 @@
     "greeting": "Hello",
     "iAm": "I'm",
     "name": "Thiago Araujo",
-    "title": "Front-End Developer",
-    "experience": "6 years of experience",
+    "title": "Software Engineer",
+    "experience": "Over 8 years of experience",
     "contactButton": "Contact"
   },
   "about": {
     "title": "About me",
-    "description1": "Hello, I'm <strong>Thiago Rodrigues</strong>, Front-end Developer focused on <strong>React, TypeScript and Next.js</strong>.",
-    "description2": "I have over <strong>6 years of experience</strong> creating modern, performant and scalable interfaces, always applying best practices and focusing on user experience.",
+    "description1": "Hello, I'm <strong>Thiago Araujo Rodrigues</strong>, Software Engineer specialized in <strong>React, Next.js, TypeScript and React Native</strong>.",
+    "description2": "I have over <strong>8 years of experience</strong> building web and mobile applications, working on corporate projects for large companies and government agencies, with a focus on performance, architecture, scalability and code quality.",
     "skillsTitle": "Main skills",
-    "skill1": "Modern and responsive interfaces",
-    "skill2": "Componentization and best practices",
-    "skill3": "REST API integration"
+    "skill1": "Web and mobile development with React, Next.js and React Native",
+    "skill2": "Backend with Groovy/Grails, SQL and REST integrations",
+    "skill3": "Legacy system refactoring and scalable architecture"
   },
   "projects": {
     "title": "My projects",
@@ -55,20 +55,20 @@
     "title": "Experiences",
     "items": {
       "tim1": {
-        "text": "Junior Apprentice - Infrastructure - TIM Brasil",
-        "date": "August, 2016"
+        "text": "Junior Apprentice — TIM Brasil",
+        "date": "2015 – 2016"
       },
       "tim2": {
-        "text": "Intern - Lee Brock Camargo Advogados(LBCA)",
-        "date": "August, 2017"
+        "text": "Development Intern — LBCA",
+        "date": "2017 – 2018"
       },
       "tim3": {
-        "text": "Antlia Technology and IT Services",
-        "date": "June, 2019"
+        "text": "Developer — Antlia (Itaú Project)",
+        "date": "2018 – 2020"
       },
       "tim4": {
-        "text": "Muve Digital",
-        "date": "April, 2021"
+        "text": "Full Stack Developer — Muve Digital",
+        "date": "2021 – Present"
       }
     }
   },
