@@ -31,11 +31,8 @@
   padding: 2.5rem;
   border-radius: 20px;
 
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 
   h1 {
     font-size: 2.4rem;
@@ -75,9 +72,9 @@
   gap: 1.5rem;
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 12px;
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 88, 211, 0.1);
 
   img {
     width: 5rem;

@@ -24,7 +24,7 @@ function Main() {
                 className="hero-image"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 }}
             >
                 <motion.img src={profile} alt='picture'/>
@@ -34,6 +34,7 @@ function Main() {
           className="about"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
           <h2>{t('about.title')}</h2>
@@ -57,7 +58,7 @@ function Main() {
                         className='about'
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: false }}
+                        viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <label><h2>{t('about.skillsTitle')}</h2></label>

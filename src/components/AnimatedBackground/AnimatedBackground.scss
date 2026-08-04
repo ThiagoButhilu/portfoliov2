@@ -1,0 +1,144 @@
+.animated-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+}
+
+.animated-background__base {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    #e8e4ff 0%,
+    #f5f3ff 25%,
+    #ffffff 50%,
+    #ebe7ff 75%,
+    #f0f4f8 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-shift 24s ease infinite;
+}
+
+.animated-background__orb {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.75;
+  transform: translate3d(0, 0, 0);
+}
+
+.animated-background__orb--1 {
+  width: 55vmax;
+  height: 55vmax;
+  max-width: 620px;
+  max-height: 620px;
+  top: -18%;
+  left: -12%;
+  background: radial-gradient(
+    circle,
+    rgba(102, 88, 211, 0.55) 0%,
+    rgba(102, 88, 211, 0.2) 35%,
+    rgba(102, 88, 211, 0) 68%
+  );
+  animation: float-1 28s ease-in-out infinite;
+}
+
+.animated-background__orb--2 {
+  width: 45vmax;
+  height: 45vmax;
+  max-width: 520px;
+  max-height: 520px;
+  top: 10%;
+  right: -14%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 127, 240, 0.5) 0%,
+    rgba(139, 127, 240, 0.18) 38%,
+    rgba(139, 127, 240, 0) 70%
+  );
+  animation: float-2 32s ease-in-out infinite;
+}
+
+.animated-background__orb--3 {
+  width: 50vmax;
+  height: 50vmax;
+  max-width: 580px;
+  max-height: 580px;
+  bottom: -20%;
+  left: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(88, 72, 210, 0.45) 0%,
+    rgba(168, 155, 245, 0.2) 40%,
+    rgba(168, 155, 245, 0) 72%
+  );
+  animation: float-3 36s ease-in-out infinite;
+}
+
+.animated-background__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image:
+    linear-gradient(rgba(102, 88, 211, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102, 88, 211, 0.1) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at center, black 25%, transparent 80%);
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+}
+
+@keyframes float-1 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(8vw, 6vh, 0);
+  }
+}
+
+@keyframes float-2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-10vw, 8vh, 0);
+  }
+}
+
+@keyframes float-3 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(6vw, -8vh, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-background__base,
+  .animated-background__orb {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated-background__orb--1,
+  .animated-background__orb--2,
+  .animated-background__orb--3 {
+    opacity: 0.65;
+  }
+}

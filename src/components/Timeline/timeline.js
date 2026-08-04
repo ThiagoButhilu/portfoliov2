@@ -105,26 +105,25 @@ const Timeline = () => {
 ]
 
 const TimelineItem = ({ data }) => (
-  <motion.div 
-initial={{ opacity: 0, scale: 0.5 }}
-  whileInView={{
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.6,
-      delay: 0.2,
-      ease: [0, 0.71, 0.2, 1.01],
-    }
-  }}
-  viewport={{ once: false }}
+  <motion.div
+    initial={{ opacity: 0, y: 24 }}
+    whileInView={{
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: [0, 0.71, 0.2, 1.01],
+      }
+    }}
+    viewport={{ once: true }}
     className="timeline-item">
         <div className="timeline-item-content">
             <time>{data.date}</time>
             <p>{data.text}</p>
                 <div className="language-div">
-                    {data.language.map((data, idx) => (
-                        <span className="tag" style={{ background: data.color }}>
-                            {data.tag}
+                    {data.language.map((lang) => (
+                        <span className="tag" key={lang.tag} style={{ background: lang.color }}>
+                            {lang.tag}
                         </span>
                     ))}
                 </div>

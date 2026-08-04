@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import { NavHashLink, HashLink } from 'react-router-hash-link'
+import { HashLink } from 'react-router-hash-link'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 
@@ -25,21 +25,21 @@ function Header() {
                         <span><Typing></Typing></span>
                     </HashLink>
                 <nav>
-                    <NavHashLink to={"/#home"} smooth>
+                    <HashLink to="/#home" smooth>
                         {t('header.home')}
-                    </NavHashLink>
-                    <NavHashLink to={"/#about"} smooth>
+                    </HashLink>
+                    <HashLink to="/#about" smooth>
                         {t('header.about')}
-                    </NavHashLink>
-                    <NavHashLink to={"/#projects"} smooth>
+                    </HashLink>
+                    <HashLink to="/#projects" smooth>
                         {t('header.projects')}
-                    </NavHashLink>
-                    <NavHashLink to={"/#experiences"} smooth>
+                    </HashLink>
+                    <HashLink to="/#experiences" smooth>
                         {t('header.experiences')}
-                    </NavHashLink>
-                    <NavHashLink to={"/#form"} smooth>
+                    </HashLink>
+                    <HashLink to="/#form" smooth>
                         {t('header.contact')}
-                    </NavHashLink>
+                    </HashLink>
                     <a href={resume} download="Curriculo_Thiago_Atualizado.pdf" className='button'>
                         {t('header.resume')}
                     </a>

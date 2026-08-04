@@ -3,7 +3,7 @@ import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
 
 import './Particles.css';
 
-const defaultColors = ["#f0f4f8", "#f0f4f8", "#f0f4f8"];
+const defaultColors = ["#6658d3", "#8b7ff0", "#a89bf5"];
 
 const hexToRgb = (hex) => {
   hex = hex.replace(/^#/, "");
@@ -97,10 +97,22 @@ const Particles = ({
     const container = containerRef.current;
     if (!container) return;
 
-    const renderer = new Renderer({ depth: false, alpha: true });
+    let renderer;
+    try {
+      renderer = new Renderer({ depth: false, alpha: true });
+    } catch (error) {
+      console.warn("Particles: unable to create WebGL renderer.", error);
+      return;
+    }
+
     const gl = renderer.gl;
+    if (!gl) {
+      console.warn("Particles: WebGL context is not available.");
+      return;
+    }
+
     container.appendChild(gl.canvas);
-    gl.clearColor(1, 1, 1, 1);
+    gl.clearColor(1, 1, 1, 0);
 
     const camera = new Camera(gl, { fov: 15 });
     camera.position.set(0, 0, cameraDistance);
@@ -226,7 +238,7 @@ const Particles = ({
   return (
     <div
       ref={containerRef}
-      className={`particles-container ${className}`}
+      className={`particles-container ${className ?? ""}`}
     />
   );
 };

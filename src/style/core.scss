@@ -83,7 +83,6 @@ h3{
   justify-content: space-between;
   align-items: center;
   padding: 1.8rem 10rem;
-  backdrop-filter: blur(6px);
   z-index: 1000;
   width: 100%;
 
@@ -273,11 +272,6 @@ p {
   font-size: 1.6rem;
 }
 
-
-body {
-  background: var(--background);
-}
-
 ul,
 li {
   text-decoration: none;
@@ -304,9 +298,9 @@ h3{
 body {
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
-  background-color: var(--black);
+  background-color: var(--background);
   color: var(--font-color);
-  	font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 input,

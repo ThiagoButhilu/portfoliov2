@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { motion } from "framer-motion"
-import { NavHashLink } from "react-router-hash-link"
+import { HashLink } from "react-router-hash-link"
 import { useTranslation } from 'react-i18next'
 import linkedin from '../../assets/linkedin.svg'
 import githubIcon from '../../assets/github-mark.svg'
@@ -21,7 +21,7 @@ export function Intro() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}   
           viewport={{
-            once: false,
+            once: true,
             amount: "some",
             margin: "-50px 0px"
           }}
@@ -33,7 +33,7 @@ export function Intro() {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {titleName}
@@ -42,46 +42,44 @@ export function Intro() {
         <motion.h3
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           {t('intro.title')}
         </motion.h3>
         
-        <motion.p
-          className="small-resume"
+        <motion.div
+          className="small-resume text-red-500 p-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <div className="text-red-500 p-4">
-            {t('intro.experience')}
-          </div>
-        </motion.p>
+          {t('intro.experience')}
+        </motion.div>
         
         <motion.div
         className='clickable'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <BrowserRouter>
-            <NavHashLink smooth to="#form">{t('intro.contactButton')}</NavHashLink>
+            <HashLink smooth to="#form">{t('intro.contactButton')}</HashLink>
           </BrowserRouter>
         </motion.div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 1 }}
         />
             <motion.div className='social-media'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 1 }}>
                <motion.a whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.95 }}
@@ -115,7 +113,7 @@ export function Intro() {
             className="hero-image"
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 1 }}
             >
             <img src={me} alt='illustration'/>
